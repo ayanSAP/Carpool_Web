@@ -20,23 +20,25 @@
   <body>
     <div class="center">
       <h1>Welcome</h1>
-      <form action="/" method="post">
+      <form id="form_id" method="post" name="myform">
         <div class="txt_field">
-          <input type="text" required />
+          <input type="text" name="email" id="email" required />
           <span></span>
           <label>Email</label>
         </div>
         <div class="txt_field">
-          <input type="password" required />
+          <input type="password" name="password" id="password" required />
           <span></span>
           <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
-        <input type="submit" value="LOGIN" />
+        <input type="submit" value="LOGIN" id="submit" onclick="validate()"/>
         <div class="signup_link">
           Not a member? <a href="signup.html">Sign up</a>
         </div>
       </form>
     </div>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
