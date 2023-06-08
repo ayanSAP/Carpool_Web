@@ -20,24 +20,24 @@
   <body>
     <div class="center">
       <h1>Welcome</h1>
-      <form action="/" method="post">
+      <form action="/" method="post" name="myForm" onsubmit="return validateForm()">
         <div class="txt_field">
-          <input type="text" required />
+          <input type="text" name="fullName" id="fullName" required />
           <span></span>
           <label>Full Name</label>
         </div>
         <div class="txt_field">
-          <input type="text" required />
+          <input type="text" name="email" id="email" required />
           <span></span>
           <label>Email</label>
         </div>
         <div class="txt_field">
-          <input type="password" required />
+          <input type="password" name="password1" id="password1" required />
           <span></span>
           <label>Password</label>
         </div>
         <div class="txt_field">
-          <input type="password" required />
+          <input type="password" name="password2" id="password2" required />
           <span></span>
           <label>Confirm Password</label>
         </div>
@@ -46,4 +46,7 @@
       </form>
     </div>
   </body>
+  
+  <!-- JS -->
+  <script src="js/signup.js"></script>
 </html>
