@@ -4,9 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles-news.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a7e82826af.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fa-solid fa-bars" style="color: #000000"></i>
+      </span>
       <a href="#" class="logo">LOGO</a>
       <ul class="main-nav" id="js-menu">
         <li>
@@ -22,9 +42,12 @@
           <a href="#" class="nav-links">News</a>
         </li>
         <li>
-          <a href="#" class="nav-links">Login</a>
+          <a href="#" class="nav-links active">Login</a>
         </li>
       </ul>
     </nav>
+
+     <!-- JS -->
+     <script src="js/news.js"></script>
   </body>
 </html>
