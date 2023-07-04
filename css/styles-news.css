@@ -7,6 +7,9 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -34,11 +37,11 @@ body {
 }
 
 .main-nav a:hover {
-    border-bottom: 3px solid #ce4257;
+  border-bottom: 3px solid #ce4257;
 }
 
 .main-nav a.active {
-    color: #ce4257;
+  color: #ce4257;
 }
 .logo {
   display: inline-block;
@@ -101,4 +104,33 @@ body {
   .nav-links:hover {
     color: rgba(255, 255, 255, 1);
   }
+}
+
+.container {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* Footer Designs */
+footer {
+  width: 100%;
+  background: #e7e7e7;
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+}
+ul {
+  padding: 0.1rem;
+  text-align: center;
+}
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.25rem 0.75rem;
+}
+ul a {
+  color: #fff;
+  text-decoration: none;
+}
+ul a:hover {
+  text-decoration: underline;
 }
