@@ -140,11 +140,19 @@ body {
   background-color: #f1f1f1;
 }
 
-.container h2 {
+.container h1 {
   text-align: center;
 }
 
 .title-card {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.card h3 {
+  padding: 10px 0 10px 0;
+}
+
+.card h4 {
+  padding: 0 0 10px 0;
 }
