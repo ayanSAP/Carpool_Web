@@ -81,6 +81,10 @@ body {
     height: 70px;
     align-items: center;
   }
+  body {
+    box-sizing: inherit;
+    padding-bottom: 5rem;
+  }
   .main-nav {
     display: flex;
     margin-right: 30px;
@@ -105,6 +109,7 @@ body {
   }
 }
 
+/* Card Designs */
 .column {
   float: left;
   width: 25%;
@@ -135,7 +140,7 @@ body {
 /* Style the counter cards */
 .card {
   border-radius: 3%;
-  border: 2px solid #ce4257;
+  border: 1px solid #ce4257;
   padding: 16px;
   text-align: center;
 }
@@ -155,4 +160,18 @@ body {
 
 .card h4 {
   padding: 0 0 10px 0;
+}
+
+/* Footer */
+
+main {
+  margin: 0 auto;
+  padding: 10px 20px;
+  min-height: calc(100vh - 679.5px - 59px);
+}
+
+footer {
+  text-align: center;
+  background-color: #e7e7e7;
+  padding: 15px;
 }
