@@ -119,6 +119,7 @@ body {
 /* Remove extra left and right margins */
 .row {
   margin: 0 10px;
+  padding-bottom: 16px;
 }
 
 /* Clear floats after the columns */
