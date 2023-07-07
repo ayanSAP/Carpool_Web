@@ -113,48 +113,48 @@ input[type="submit"]:hover {
 
 /* Footer */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .inner-footer {
-    margin: 0;
-    padding: 0;
-    background-color: #d1d1d1;
+  margin: 0;
+  padding: 0;
+  background-color: #d1d1d1;
 }
 
 .quick-links {
-    display: flex;
-    margin: auto;
-    width: 400px
+  display: flex;
+  margin: auto;
+  width: 400px;
 }
 
 .quick-links ul {
-    display: flex;
+  display: flex;
 }
 
 .quick-items {
-    list-style: none;
+  list-style: none;
 }
 
 .quick-items a {
-    text-decoration: none;
-    padding: 0px 15px;
-    font-size: 14px;
-    font-weight: 500;
-    color: black;
-    transition: all .25s;
+  text-decoration: none;
+  padding: 0px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  transition: all 0.25s;
 }
 
 .quick-items a:hover {
-    color: #ce4257;
+  color: #ce4257;
 }
 
 .outer-footer {
-    padding: 10px;
-    text-align: center;
-    color: black;
-    font-size: 13px;
-    background-color: #c5c3c3;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  font-size: 13px;
+  background-color: #c5c3c3;
 }
