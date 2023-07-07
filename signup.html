@@ -7,7 +7,7 @@
     <title>Sign up</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles2.css" />
+    <link rel="stylesheet" href="css/styles-signup.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,10 +20,7 @@
   <body>
     <div class="center">
       <h1>Welcome</h1>
-      <form
-        action="/action_page.php"
-        name="myForm"
-      >
+      <form action="/action_page.php" name="myForm">
         <div class="txt_field">
           <input type="text" name="fullName" id="fullName" required />
           <span></span>
@@ -50,6 +47,28 @@
         </div>
       </form>
     </div>
+
+    <!-- Footer navbar -->
+    <footer class="footer">
+      <div class="inner-footer">
+        <div class="quick-links">
+          <ul>
+            <li class="quick-items"><a href="#">Login</a></li>
+            <li class="quick-items"><a href="#">Sign up</a></li>
+            <li class="quick-items"><a href="#">Contact</a></li>
+            <li class="quick-items"><a href="#">News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outer-footer">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        SAP CoE
+      </div>
+    </footer>
 
     <!-- Cloud Firebase JS -->
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
