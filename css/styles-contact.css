@@ -12,7 +12,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 550px;
+  width: 28vw;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -20,13 +20,15 @@ body {
 
 .center h1 {
   text-align: center;
-  padding: 0 0 2px 0;
+  font-size: 24px;
+  padding: 2px 0 2px 0;
 }
 
 .center p {
   text-align: center;
   padding: 0 0 20px 0;
   border-bottom: 1px solid silver;
+  font-size: 14px;
 }
 
 .center form {
@@ -132,7 +134,7 @@ input[type="submit"]:hover {
 }
 
 .blank {
-  margin: 70px 0;
+  margin: 40px 0;
 }
 
 .txt_field_text .freeform {
@@ -183,6 +185,6 @@ footer {
   padding: 10px;
   text-align: center;
   color: black;
-  font-size: 13px;
+  font-size: 14px;
   background-color: #c5c3c3;
 }
