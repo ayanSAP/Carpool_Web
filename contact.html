@@ -20,7 +20,7 @@
     <div class="center">
       <h1>HAVE SOME QUESTIONS?</h1>
       <p>SAP Waterside 3, Kingswood Avenue</p>
-      <form action="/action_page.php" name="myform" id="form_id" method="post">
+      <form action="" name="myform" id="form_id" method="post">
         <div class="txt_field">
           <input type="text" name="f_name" id="f_name" required />
           <span></span>
@@ -47,12 +47,7 @@
           <span></span>
           <label>Your questions...</label>
         </div>
-        <input
-          type="submit"
-          value="SEND MESSAGE"
-          id="submit"
-          onclick="validate()"
-        />
+        <input type="submit" value="SEND MESSAGE" id="submit" />
         <div class="blank"></div>
       </form>
     </div>
@@ -79,6 +74,8 @@
       </div>
     </footer>
 
+    <!-- Firebase CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <!-- Javascript  -->
     <script src="js/contact-form.js"></script>
   </body>
