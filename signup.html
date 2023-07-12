@@ -20,7 +20,7 @@
   <body>
     <div class="center">
       <h1>Welcome</h1>
-      <form action="/action_page.php" name="myForm">
+      <form action="" name="myForm" id="form_id">
         <div class="txt_field">
           <input type="text" name="fullName" id="fullName" required />
           <span></span>
@@ -36,11 +36,11 @@
           <span></span>
           <label>Password</label>
         </div>
-        <div class="txt_field">
+        <!-- <div class="txt_field">
           <input type="password" name="password2" id="password2" required />
           <span></span>
           <label>Confirm Password</label>
-        </div>
+        </div> -->
         <input type="submit" id="submit" value="SIGN UP" />
         <div class="signup_link">
           Already a member? <a href="login.html">Sign in</a>
@@ -70,10 +70,49 @@
       </div>
     </footer>
 
-    <!-- Cloud Firebase JS -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
     <!-- JS -->
-    <script src="js/signup.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+
+      import { getAuth } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBT_1dzewRh91ku_FIEAn-e8ASVU-6CUGg",
+        authDomain: "loginauthentication-2af84.firebaseapp.com",
+        projectId: "loginauthentication-2af84",
+        storageBucket: "loginauthentication-2af84.appspot.com",
+        messagingSenderId: "246444139633",
+        appId: "1:246444139633:web:30cadab5ea6cb54fd5e7d0",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const DB = getDatabase(app);
+
+      // Initialize Firebase Authentication and get a reference to the service
+      const auth = getAuth(app);
+
+      submit.addEventListener("click", (e) => {
+        var fullName = document.getElementById("fullName").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password1").value;
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            alert("User Created Success");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            alert(errorMessage);
+          });
+      });
+    </script>
   </body>
 </html>

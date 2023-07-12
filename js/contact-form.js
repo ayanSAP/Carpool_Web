@@ -17,7 +17,8 @@ firebase.initializeApp(firebaseConfig);
 
 const firebaseDB = firebase.database();
 
-const ref = firebaseDB.ref("Contact Messages");
+const ref = firebaseDB.ref("user");
+// const ref = firebaseDB.ref(document.getElementById("f_name").value);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
