@@ -131,6 +131,8 @@ input[type="submit"]:hover {
   border: 1px solid #ce4257;
   background-color: #f8f8f8;
   resize: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 .blank {
