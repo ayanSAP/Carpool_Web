@@ -1,53 +1,43 @@
-// Firebase Connect
+const form = document.getElementById("form_id");
+const alert = document.querySelector(".alert");
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAYjwcBt3q7lEiMXNeRTho247jhbDetLjY",
-  authDomain: "carpool-web-app-cloud.firebaseapp.com",
-  databaseURL: "https://carpool-web-app-cloud-default-rtdb.firebaseio.com",
-  projectId: "carpool-web-app-cloud",
-  storageBucket: "carpool-web-app-cloud.appspot.com",
-  messagingSenderId: "686804398668",
-  appId: "1:686804398668:web:db5151f6c73db6e6c7fae9",
-  measurementId: "G-8JZG1G7LH5",
+  apiKey: "AIzaSyDXP6EiawU5fZoEHS8fMDJQXPSBHt36b1Q",
+  authDomain: "contactform-979c9.firebaseapp.com",
+  databaseURL: "https://contactform-979c9-default-rtdb.firebaseio.com",
+  projectId: "contactform-979c9",
+  storageBucket: "contactform-979c9.appspot.com",
+  messagingSenderId: "27939733023",
+  appId: "1:27939733023:web:60006f9840add7a02cdf2a",
 };
 
-//Initialize Firebase
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-//reference database
-var contactFormDB = firebase.database().ref("carpool-web-app");
+const firebaseDB = firebase.database();
 
-document.getElementById("form_id").addEventListener("submit", submitForm);
+const ref = firebaseDB.ref("messages");
 
-function submitForm(e) {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  var fullName = getElementVal("f_name");
-  var email = getElementVal("email");
-  var textMessage = getElementVal("freeform");
+  const fullName = document.getElementById("f_name").value;
+  const email = document.getElementById("email").value;
+  const textMessage = document.getElementById("freeform").value;
 
-  console.log(fullName, email, textMessage);
-}
+  //   console.log(fullName, email, textMessage);
 
-const getElementVal = (id) => {
-  return document.getElementById(id).value;
-};
+  ref.push({
+    fullName: fullName,
+    email: email,
+    textMessage: textMessage,
+  });
+  alert.style.display = "block";
 
-// // validateForm() for click event
-// document.getElementById("submit").addEventListener("click", validateForm);
-// function validateForm() {
-//   // get full name
-//   let fullName = document.getElementById("f_name").value;
+  setTimeout(() => {
+    alert.style.display = "none";
+  }, 2000);
 
-//   //get email address
-//   let email = document.getElementById("email").value;
-
-//   //get text message
-//   let textMessage = document.getElementById("freeform").value;
-
-//   //checking if all fields have been filled before sending
-//   if (fullName.trim() == "" || email.trim() == "" || textMessage.trim() == "") {
-//     alert("All fields must be filled");
-//   } else {
-//     sendMessage(fullName, email, textMessage);
-//   }
-// }
+  form.reset();
+});

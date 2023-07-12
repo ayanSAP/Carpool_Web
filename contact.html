@@ -15,12 +15,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
   </head>
   <body>
     <div class="center">
       <h1>HAVE SOME QUESTIONS?</h1>
       <p>SAP Waterside 3, Kingswood Avenue</p>
-      <form action="" name="myform" id="form_id" method="post">
+      <form action="" name="myform" id="form_id">
         <div class="txt_field">
           <input type="text" name="f_name" id="f_name" required />
           <span></span>
@@ -49,6 +53,10 @@
         </div>
         <input type="submit" value="SEND MESSAGE" id="submit" />
         <div class="blank"></div>
+
+        <div class="alert">
+          Form submitted successfully!
+        </div>
       </form>
     </div>
 
@@ -74,8 +82,6 @@
       </div>
     </footer>
 
-    <!-- Firebase CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <!-- Javascript  -->
     <script src="js/contact-form.js"></script>
   </body>
