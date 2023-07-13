@@ -1,3 +1,5 @@
+const alert = document.querySelector(".alert");
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
 import {
@@ -23,23 +25,45 @@ const auth = getAuth();
 var fullName = document.getElementById("fullName");
 var email = document.getElementById("email");
 var password = document.getElementById("password1");
+var confirmPassword = document.getElementById("password2");
+
+var form = document.getElementById("form_id");
 
 //create function
 window.signup = function (e) {
+  var isVerified = true;
   e.preventDefault();
   var obj = {
     fullName: fullName.value,
     email: email.value,
-    password: password.value,
+    password1: password.value,
+    password2: confirmPassword.value,
   };
 
-  createUserWithEmailAndPassword(auth, obj.email, obj.password)
-    .then((success) => {
-      alert("Sign up successfully");
-    })
-    .catch((err) => {
-      alert("error" + err);
-    });
+  if (obj.password1 != obj.password2) {
+    window.alert("Password fields do not match. Try again!!");
+    isVerified = false;
+    form.reset();
+  }
 
-  console.log(obj);
+  if (isVerified) {
+    createUserWithEmailAndPassword(auth, obj.email, obj.password1)
+      .then((userCredential) => {
+        const user = userCredential.user;
+
+        // alert("Sign up successfully");
+        alert.style.display = "block";
+
+        setTimeout(() => {
+          alert.style.display = "none";
+        }, 2000);
+
+        form.reset();
+      })
+      .catch((err) => {
+        alert("error" + err);
+      });
+  }
+
+  //   console.log(obj);
 };
