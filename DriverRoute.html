@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <title>DriverRoute</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="DriverRoute.css" />
+	
+
+	    <!-- Google Fonts -->
+	    <link rel="preconnect" href="https://fonts.googleapis.com" />
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	    <link
+	      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+	      rel="stylesheet"
+	    />
+	
+
+	    <!-- Font Awesome -->
+	    <script
+	      src="https://kit.fontawesome.com/a7e82826af.js"
+	      crossorigin="anonymous"
+	    ></script>
+	  </head>
+	  <body>
+	    <nav class="navbar">
+	      <span class="navbar-toggle" id="js-navbar-toggle">
+	        <i class="fa-solid fa-bars" style="color: #000000"></i>
+	      </span>
+	      <a href="#" class="logo">LOGO</a>
+	      <ul class="main-nav" id="js-menu">
+	        <li>
+	          <a href="#" class="nav-links">Home</a>
+	        </li>
+			<li>
+				<a href="#" class="nav-links">Get started</a>
+			  </li>
+	        <li>
+	          <a href="#" class="nav-links">About</a>
+	        </li>
+	        <li>
+	          <a href="#" class="nav-links">Contact</a>
+	        </li>
+	        <li>
+	          <a href="#" class="nav-links">News</a>
+	        </li>
+	        <li>
+	          <a href="#" class="nav-links">Login</a>
+	        </li>
+	      </ul>
+	    </nav>
+		
+		 <div class="container">
+		 
+    <form>
+	<img src="DriverRoute.png" alt="DriverRouteImage" class="DriverRouteImage">
+      <div class="form-group">
+  <input type="text" id="leaving-from" name="leaving-from" placeholder="● Leaving from...">
+        <input type="text" id="going-to" name="going-to" placeholder="● Going to...">
+        <input type="datetime-local" id="datetime" name="datetime">
+		<div class="input-with-icon">
+		<i class="fa-solid fa-user"></i>
+         <input type="number"  id="passenger-count" name="passenger-count" value="1" min="1">
+		 </div>
+      <button type="submit" id="search">Search</button>
+	  </div>
+	</form>	
+		
+		<div class="info">
+		<h1>Welcome  dear drivers</h1>
+		<p>We're excited to introduce you to a seamless solution 
+		for making your daily commute an enjoyable and collaborative experience. 
+		Designed specifically for employees who drive their own cars, this page allows 
+		you to take charge of your journey while fostering a sense of camaraderie with your colleagues.
+		<br><br>With our user-friendly interface, you can easily input your starting point and destination, 
+		along with the date and time you're heading to work. We've made it effortless for you to share your 
+		commuting details and offer a helping hand to your fellow coworkers who are seeking a reliable carpooling service.
+		But that's not all! Our carpooling app allows you to specify the number of passengers you can comfortably 
+		accommodate in your car. By doing so, you're not just providing a convenient ride to your colleagues, 
+		but you're also contributing to a more sustainable and eco-friendly way of commuting.
+		<br><br>Join us on this exciting carpooling journey and let's make your work commute more efficient, 
+		enjoyable, and socially responsible than ever before! Together, we can transform the way we travel 
+		and create a positive impact on our workplace community.</p>
+		</div>
+		
+
+	
+<footer class="footer">
+    <p>&copy;2023<img src="SAPlogo.png" alt="SAPlogo" class="SAPlogo"> </p>
+  </footer>
+
+	     <!-- JS -->
+	     <script src="js/DriverRoute.js"></script>
+	  </body>
+	</html>
