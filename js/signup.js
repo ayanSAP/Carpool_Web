@@ -50,7 +50,6 @@ window.signup = function (e) {
     createUserWithEmailAndPassword(auth, obj.email, obj.password1)
       .then((userCredential) => {
         const user = userCredential.user;
-
         // alert("Sign up successfully");
         alert.style.display = "block";
 
@@ -61,7 +60,7 @@ window.signup = function (e) {
         form.reset();
       })
       .catch((err) => {
-        alert("error" + err);
+        window.alert("error" + err);
       });
   }
 

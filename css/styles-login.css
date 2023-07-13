@@ -120,6 +120,16 @@ input[type="submit"]:hover {
   text-decoration: underline;
 }
 
+/* Alert box */
+.alert {
+  display: none;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  background-color: rgb(98, 206, 65);
+  color: white;
+  border-radius: 5px;
+}
+
 /* Footer */
 footer {
   position: fixed;

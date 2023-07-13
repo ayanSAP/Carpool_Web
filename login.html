@@ -20,7 +20,7 @@
   <body>
     <div class="center">
       <h1>Welcome</h1>
-      <form id="form_id" action="" name="myform">
+      <form id="form_id" action="" name="myform" onsubmit="login(event)">
         <div class="txt_field">
           <input type="text" name="email" id="email" required />
           <span></span>
@@ -32,7 +32,8 @@
           <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
-        <input type="submit" value="LOGIN" id="submit" onclick="validate()" />
+        <input type="submit" value="LOGIN" id="submit" />
+        <div class="alert">Login successfull!! Welcome.</div>
         <div class="signup_link">
           Not a member? <a href="signup.html">Sign up</a>
         </div>
@@ -60,5 +61,8 @@
         SAP CoE
       </div>
     </footer>
+
+    <!-- JS -->
+    <script type="module" src="js/login.js"></script>
   </body>
 </html>
