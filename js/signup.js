@@ -60,7 +60,7 @@ window.signup = function (e) {
         form.reset();
       })
       .catch((err) => {
-        window.alert("error" + err);
+        window.alert("Sign up error" + err);
       });
   }
 

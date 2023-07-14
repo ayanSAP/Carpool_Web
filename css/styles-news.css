@@ -140,10 +140,16 @@ body {
 
 /* Style the counter cards */
 .card {
-  border-radius: 3%;
-  border: 1px solid #ce4257;
+  /* border-radius: 3%; */
+  border: 2px solid #ce4257;
   padding: 16px;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.card img {
+  width: 100%;
 }
 
 .container h1 {

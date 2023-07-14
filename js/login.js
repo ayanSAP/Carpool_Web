@@ -49,6 +49,8 @@ window.login = function (e) {
       form.reset();
     })
     .catch((err) => {
-        window.alert("Login error" + err);
-      });
+      window.alert("Login error" + err);
+
+      form.reset();
+    });
 };
