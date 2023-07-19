@@ -169,13 +169,13 @@ button {
   border: 5px;
   border-radius: 20px;
   background-color: white;
-  color: #800020;
+  color: #ce4257;
   cursor: pointer;
-  outline: 2px solid #800020;
+  outline: 2px solid #ce4257;
 }
 
 button:hover {
-  background-color: #800020;
+  background-color: #ce4257;
   color: white;
 }
 
