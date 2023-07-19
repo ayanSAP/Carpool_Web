@@ -100,7 +100,7 @@ body {
   .logo:hover,
   .nav-links:hover {
     color: rgba(255, 255, 255, 1);
-  } 
+  }
 }
 
 /* CSS for mobile */
@@ -122,6 +122,7 @@ h1.title {
   .content {
     flex-direction: row;
     justify-content: flex-start;
+    padding: 50px 40px;
   }
 
   .image {
@@ -134,7 +135,7 @@ h1.title {
 
   p {
     order: 2;
-    color: blue;
+    color: black;
   }
 }
 
@@ -193,10 +194,3 @@ button:hover {
   height: auto;
   margin-left: 5px; /* Add margin to the right side of the image */
 }
-
-
-
-
-
-
-
