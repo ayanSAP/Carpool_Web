@@ -163,13 +163,13 @@ form .txt_field {
   left: 0;
   width: 0%;
   height: 2px;
-  background: #2691d9;
+  background: #ce4257;
 }
 
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label {
   top: -5px;
-  color: #2691d9;
+  color: #ce4257;
 }
 
 .txt_field input:focus ~ span::before,
@@ -239,6 +239,16 @@ input[type="submit"]:hover {
   text-decoration: underline;
 }
 
+/* Alert box */
+.alert {
+  display: none;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  background-color: rgb(98, 206, 65);
+  color: white;
+  border-radius: 5px;
+}
+/* Footer */
 .footer {
   position: fixed;
   left: 0;
