@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publish Ride Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles-publish.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+  </head>
+  <body>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a7e82826af.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Navbar with Media Allignment -->
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fa-solid fa-bars" style="color: #000000"></i>
+      </span>
+      <a href="#" class="logo">LOGO</a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="#" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links">About</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-links">Contact</a>
+        </li>
+        <li>
+          <a href="news.html" class="nav-links">News</a>
+        </li>
+        <li>
+          <a href="login.html" class="nav-links active">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="center">
+      <h1>PUBLISH A RIDE</h1>
+      <form id="form_id" action="" name="myform">
+        <div class="txt_field">
+          <input type="text" name="f_name" id="f_name" required />
+          <span></span>
+          <label>Full Name</label>
+        </div>
+
+        <!-- <div class="txt_field">
+          <input type="text" name="last_name" id="last_name" required />
+          <span></span>
+          <label>Last name</label>
+        </div> -->
+        <div class="txt_field">
+          <input type="text" name="email" id="email" required />
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="tel" name="contact_no" id="contact_no" required />
+          <span></span>
+          <label>Contact Number</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" name="car_details" id="car_details" required />
+          <span></span>
+          <label>Car Details</label>
+        </div>
+
+        <input type="submit" value="PUBLISH" id="submit" />
+        <div class="alert">Ride Published!</div>
+        <div class="signup_link">
+          Not a member? <a href="signup.html">Sign up</a>
+        </div>
+        <div class="login_link">
+          Already a member? <a href="login.html">Login</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <div class="footer_container">
+        <div class="footer_content">
+          <p>© 2023</p>
+          <img src="images/icons8-sap-48.png" alt="Footer Logo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/publish.js"></script>
+  </body>
+</html>
