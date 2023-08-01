@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles-contact.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+  </head>
+  <body>
+    <div class="center">
+      <h1>HAVE SOME QUESTIONS?</h1>
+      <p>SAP Waterside 3, Kingswood Avenue</p>
+      <form action="" name="myform" id="form_id">
+        <div class="txt_field">
+          <input type="text" name="f_name" id="f_name" required />
+          <span></span>
+          <label>Full name</label>
+        </div>
+        <!-- <div class="txt_field">
+          <input type="text" name="l_name" id="l_name" required />
+          <span></span>
+          <label>Last Name</label>
+        </div> -->
+        <div class="txt_field">
+          <input type="text" name="email" id="email" required />
+          <span></span>
+          <label>What's your email?</label>
+        </div>
+        <div class="txt_field_text">
+          <textarea
+            name="freeform"
+            class="freeform"
+            id="freeform"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='Your questions here...'"
+            cols="45"
+            rows="5"
+          ></textarea>
+          <span></span>
+          <!-- <label>Your questions...</label> -->
+        </div>
+        <input type="submit" value="SEND MESSAGE" id="submit" />
+        <div class="blank"></div>
+
+        <div class="alert">Form submitted successfully!</div>
+      </form>
+    </div>
+
+    <!-- Footer navbar -->
+    <footer class="footer">
+      <div class="inner-footer">
+        <div class="quick-links">
+          <ul>
+            <li class="quick-items"><a href="login.html">Login</a></li>
+            <li class="quick-items"><a href="signup.html">Sign up</a></li>
+            <li class="quick-items"><a href="contact.html">Contact</a></li>
+            <li class="quick-items"><a href="news.html">News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outer-footer">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        SAP CoE
+      </div>
+    </footer>
+
+    <!-- Javascript  -->
+    <script src="js/contact-form.js"></script>
+  </body>
+</html>
