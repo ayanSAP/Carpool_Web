@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logout Page</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="fav-img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="fav-img/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: rgb(226, 226, 226);
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .center {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        background-color: #e2e2e2;
+      }
+
+      .center h1 {
+        text-align: center;
+        font-size: 70px;
+        margin: 0 0 0 0;
+      }
+
+      .center p {
+        text-align: center;
+      }
+      .center span {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .button {
+        text-align: center;
+      }
+
+      input[type="submit"] {
+        width: 50%;
+        left: 40%;
+        height: 40px;
+        border: 1px solid;
+        background: #ce4257;
+        border-radius: 25px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        border-color: #ce4257;
+        transition: 0.3s;
+      }
+
+      /* Footer */
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .inner-footer {
+        margin: 0;
+        padding: 0;
+        background-color: #d1d1d1;
+      }
+
+      .quick-links {
+        display: flex;
+        margin: auto;
+        width: 400px;
+      }
+
+      .quick-links ul {
+        display: flex;
+      }
+
+      .quick-items {
+        list-style: none;
+      }
+
+      .quick-items a {
+        text-decoration: none;
+        padding: 0px 15px;
+        font-size: 14px;
+        font-weight: 500;
+        color: black;
+        transition: all 0.25s;
+      }
+
+      .quick-items a:hover {
+        color: #ce4257;
+      }
+
+      .outer-footer {
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 13px;
+        background-color: #c5c3c3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Logged Out</h1>
+      <p>Thank you for using <span>SAP Ride</span></p>
+      <div class="button">
+        <a href="login.html"
+          ><input type="submit" id="submit" value="Sign in Again"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Footer navbar -->
+    <footer class="footer">
+      <div class="inner-footer">
+        <div class="quick-links">
+          <ul>
+            <li class="quick-items"><a href="index.html">Home</a></li>
+            <li class="quick-items"><a href="contact.html">Contact</a></li>
+            <li class="quick-items"><a href="news.html">News</a></li>
+            <li class="quick-items"><a href="signup.html">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outer-footer">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        SAP CoE
+      </div>
+    </footer>
+  </body>
+</html>

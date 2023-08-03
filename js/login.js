@@ -47,6 +47,7 @@ window.login = function (e) {
       }, 2000);
 
       form.reset();
+      window.location.href="../index.html";
     })
     .catch((err) => {
       window.alert("Login error" + err);
