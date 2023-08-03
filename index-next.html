@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Home Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles-index.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="fav-img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="fav-img/favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a7e82826af.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar with Media Allignment -->
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fa-solid fa-bars" style="color: #000000"></i>
+      </span>
+      <a href="#" class="logo">SAP Ride</a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="#" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="about-page.html" class="nav-links">About</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-links">Contact</a>
+        </li>
+        <li>
+          <a href="news.html" class="nav-links">News</a>
+        </li>
+        <li>
+          <a href="login.html" class="nav-links">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="center">
+      <div class="center_text">
+        <h1>SAP</h1>
+        <h2>Carpool service</h2>
+        <br />
+        <p>
+          Getting to work can be tough in the city. With our app, we hope to
+          join SAP employees together to come to work together. Making the
+          commute easier for all, helping the enviroment and making new friends
+          along the way.
+        </p>
+        <div class="center_text_buttons">
+          <input
+            type="submit"
+            value="Offer a ride"
+            id="submit"
+            onclick="validate()"
+          />
+          <input
+            type="submit"
+            value="Search a ride"
+            id="submit"
+            onclick="validate()"
+          />
+        </div>
+      </div>
+      <div class="center_image">
+        <img src="images/26234275_7197526.jpg" width="800" height="500" />
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer_container">
+        <div class="footer_content">
+          <p>© 2023</p>
+          <img src="images/icons8-sap-48.png" alt="SAP Logo" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
