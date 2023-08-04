@@ -116,6 +116,7 @@ h1.title {
   align-items: flex-start;
   text-align: left;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -186,6 +187,11 @@ button:hover {
   color: black;
   padding: 10px;
   text-align: left;
+  height: 50px;
+}
+
+.footer p {
+  padding-top: 8px;
 }
 
 .SAPlogo {
