@@ -207,6 +207,11 @@ button {
   color: black;
 }
 
+.center {
+  padding: 0;
+  margin: 0;
+}
+
 /* Media query for mobile */
 @media (max-width: 767px) {
   .info {
@@ -217,16 +222,31 @@ button {
 
 
 
+/*---------------FOOTER--------------*/
+
 .footer {
-  background-color: #ccc;
-  color: black;
-  padding: 10px;
-  text-align: left;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(220, 219, 219);
+  color: white;
+  height: 50px;
 }
 
-.SAPlogo {
-  width: 33px;
-  max-width: none;
-  height: auto;
-  margin-left: 5px;
+.footer_container {
+  display: flex;
+}
+
+.footer_container p {
+  float: left;
+  padding-top: 18px;
+  padding-left: 50px;
+  color: black;
+}
+
+.footer_container img {
+  float: left;
+  padding-top: 2px;
+  padding-left: 10px;
 }
