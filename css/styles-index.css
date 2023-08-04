@@ -7,6 +7,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -106,8 +107,9 @@ body {
 /* Center Div */
 
 .center {
-  padding-top: 100px;
+  padding-top: 80px;
   padding-left: 100px;
+  /* margin-bottom: 200px; */
 }
 
 .center_text {
@@ -144,7 +146,6 @@ img {
   display: flex;
   width: 300px;
   float: left;
-  margin-left: 20px;
 }
 
 input[type="submit"] {
@@ -156,12 +157,27 @@ input[type="submit"] {
   font-size: 14px;
   color: white;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 input[type="submit"]:hover {
   border-color: #ce4257;
   transition: 0.3s;
 }
+
+.center_text_buttons .submit_2 {
+  background-color: white;
+  border-radius: 25px;
+  border-color: #ce4257;
+  border-width: 2px;
+  color: #ce4257;
+}
+
+.center_text_buttons .submit_2:hover {
+  background-color: #ce4257;
+  color: white;
+}
+
 
 /*---------------FOOTER--------------*/
 
