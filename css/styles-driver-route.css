@@ -8,7 +8,7 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  min-height: 1000px;
+  min-height: 1450px;
 }
 
 .navbar {
@@ -120,9 +120,9 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 70%;
   height: 100%;
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 .form-group {
@@ -160,6 +160,11 @@ form {
   background-color: #ce4257;
   color: white;
   padding: 10px;
+  cursor: pointer;
+}
+#search:hover {
+  border-color: #ce4257;
+  transition: 0.3s;
 }
 
 .input-with-icon {
@@ -219,6 +224,35 @@ button {
     height: auto;
     padding: 20px;
   }
+}
+
+/* Designing the table */
+.table {
+  margin: 30px 40px;
+  padding-top: 70px;
+}
+
+.table h1 {
+  text-align: center;
+  color: #ce4257;
+  padding-bottom: 20px;
+}
+
+/* Table Design */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 /*---------------FOOTER--------------*/

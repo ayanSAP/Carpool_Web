@@ -51,53 +51,43 @@
   <body>
     <div class="center">
       <h1>Found Rides</h1>
-      <table>
+      <table class="show">
         <tr>
           <th>To SAP?</th>
-          <th>Arrival/Departure Time</th>
-          <th>Start Location</th>
-          <th>End Location</th>
+          <th>Leaving from</th>
+          <th>Going to</th>
+          <th>Date/ Time</th>
           <th>Seat Availability</th>
-          <th>Day</th>
           <th>Request Ride</th>
           <th>View Driver Info</th>
         </tr>
         <tr>
           <td>yes</td>
-          <td>10:15</td>
           <td>Dublin 7</td>
           <td>SAP Waterside</td>
+          <td>16/08/23 10:15</td>
           <td>4</td>
-          <td>Monday</td>
           <td>Button 1</td>
           <td>Button 2</td>
         </tr>
-        <!-- <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td>Ernst Handel</td>
-          <td>Roland Mendel</td>
-          <td>Austria</td>
-        </tr>
-        <tr>
-          <td>Island Trading</td>
-          <td>Helen Bennett</td>
-          <td>UK</td>
-        </tr>
-        <tr>
-          <td>Laughing Bacchus Winecellars</td>
-          <td>Yoshi Tannamuri</td>
-          <td>Canada</td>
-        </tr>
-        <tr>
-          <td>Magazzini Alimentari Riuniti</td>
-          <td>Giovanni Rovelli</td>
-          <td>Italy</td>
-        </tr> -->
       </table>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+      var leaving = window.localStorage.getItem("leaving-from");
+      var going = window.localStorage.getItem("going-to");
+      var datetime = window.localStorage.getItem("date-time");
+      var count = window.localStorage.getItem("passenger-count");
+
+      // Taking table array
+      var list1 = [];
+      var list2 = [];
+      var list3 = [];
+      var list4 = [];
+
+      var n = 1;
+      var x = 0;
+    </script>
   </body>
 </html>
