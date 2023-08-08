@@ -91,7 +91,13 @@
             />
           </div>
           <!-- <button type="submit" id="search">Search</button> -->
-          <input type="button" id="search" value="Search" />
+          <input
+            type="button"
+            name="search"
+            id="search"
+            value="Search"
+            onclick="AddRow()"
+          />
         </div>
       </form>
       <div class="info">
@@ -122,9 +128,8 @@
 
       <div class="table">
         <h1>Found Rides</h1>
-        <table class="show">
+        <table class="show" id="show">
           <tr>
-            <th>To SAP?</th>
             <th>Leaving from</th>
             <th>Going to</th>
             <th>Date/ Time</th>
@@ -132,15 +137,14 @@
             <th>Request Ride</th>
             <th>View Driver Info</th>
           </tr>
-          <tr>
-            <td>yes</td>
+          <!-- <tr>
             <td>Dublin 7</td>
             <td>SAP Waterside</td>
             <td>16/08/23 10:15</td>
             <td>4</td>
             <td>Button 1</td>
             <td>Button 2</td>
-          </tr>
+          </tr> -->
         </table>
       </div>
     </div>
