@@ -18,8 +18,6 @@ firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
 
-const ref = DB.ref("Driver");
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
