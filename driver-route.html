@@ -57,86 +57,85 @@
         </li>
       </ul>
     </nav>
-    <div class="center">
-      <div class="container">
-        <form>
-          <img
-            src="images/DriverRoute.png"
-            alt="DriverRouteImage"
-            class="DriverRouteImage"
+
+    <!-- Body part -->
+    <div class="container">
+      <form>
+        <img
+          src="images/DriverRoute.png"
+          alt="DriverRouteImage"
+          class="DriverRouteImage"
+        />
+        <div class="form-group">
+          <input
+            type="text"
+            id="leaving-from"
+            name="leaving-from"
+            placeholder="● Leaving from..."
           />
-          <div class="form-group">
+          <input
+            type="text"
+            id="going-to"
+            name="going-to"
+            placeholder="● Going to..."
+          />
+          <input type="datetime-local" id="datetime" name="datetime" />
+          <div class="input-with-icon">
+            <i class="fa-solid fa-user"></i>
             <input
-              type="text"
-              id="leaving-from"
-              name="leaving-from"
-              placeholder="● Leaving from..."
+              type="number"
+              id="passenger-count"
+              name="passenger-count"
+              value="1"
+              min="1"
             />
-            <input
-              type="text"
-              id="going-to"
-              name="going-to"
-              placeholder="● Going to..."
-            />
-            <input type="datetime-local" id="datetime" name="datetime" />
-            <div class="input-with-icon">
-              <i class="fa-solid fa-user"></i>
-              <input
-                type="number"
-                id="passenger-count"
-                name="passenger-count"
-                value="1"
-                min="1"
-              />
-            </div>
-            <button type="submit" id="search">Search</button>
           </div>
-        </form>
-        <div class="info">
-          <h1>Welcome dear drivers</h1>
-          <p>
-            We're excited to introduce you to a seamless solution for making
-            your daily commute an enjoyable and collaborative experience.
-            Designed specifically for employees who drive their own cars, this
-            page allows you to take charge of your journey while fostering a
-            sense of camaraderie with your colleagues.
-            <br />
-            <br />With our user-friendly interface, you can easily input your
-            starting point and destination, along with the date and time you're
-            heading to work. We've made it effortless for you to share your
-            commuting details and offer a helping hand to your fellow coworkers
-            who are seeking a reliable carpooling service. But that's not all!
-            Our carpooling app allows you to specify the number of passengers
-            you can comfortably accommodate in your car. By doing so, you're not
-            just providing a convenient ride to your colleagues, but you're also
-            contributing to a more sustainable and eco-friendly way of
-            commuting.
-            <br />
-            <br />Join us on this exciting carpooling journey and let's make
-            your work commute more efficient, enjoyable, and socially
-            responsible than ever before! Together, we can transform the way we
-            travel and create a positive impact on our workplace community.
-          </p>
+          <button type="submit" id="search">Search</button>
         </div>
+      </form>
+      <div class="info">
+        <h1>Welcome dear Users</h1>
+        <p>
+          We're excited to introduce you to a seamless solution for making your
+          daily commute an enjoyable and collaborative experience. Designed
+          specifically for employees who drive their own cars, this page allows
+          you to take charge of your journey while fostering a sense of
+          camaraderie with your colleagues.
+          <br />
+          <br />With our user-friendly interface, you can easily input your
+          starting point and destination, along with the date and time you're
+          heading to work. We've made it effortless for you to share your
+          commuting details and offer a helping hand to your fellow coworkers
+          who are seeking a reliable carpooling service. But that's not all! Our
+          carpooling app allows you to specify the number of passengers you can
+          comfortably accommodate in your car. By doing so, you're not just
+          providing a convenient ride to your colleagues, but you're also
+          contributing to a more sustainable and eco-friendly way of commuting.
+          <br />
+          <br />Join us on this exciting carpooling journey and let's make your
+          work commute more efficient, enjoyable, and socially responsible than
+          ever before! Together, we can transform the way we travel and create a
+          positive impact on our workplace community.
+        </p>
       </div>
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="footer_container">
-          <div class="footer_content">
-            <p>
-              &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-            </p>
-            <img src="images/icons8-sap-48.png" alt="SAP Logo" />
-          </div>
-        </div>
-      </div>
-
-      <!-- JS -->
-      <script src="js/driver-route.js"></script>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer_container">
+        <div class="footer_content">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </p>
+          <img src="images/icons8-sap-48.png" alt="SAP Logo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/driver-route.js"></script>
   </body>
 </html>

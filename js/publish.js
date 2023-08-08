@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
   const contactNo = document.getElementById("contact_no").value;
   const carDetails = document.getElementById("car_details").value;
 
-  const ref = DB.ref("drivers/" + fullName);
+  const ref = DB.ref("drivers");
 
   console.log(fullName, email, contactNo, carDetails);
 
@@ -46,4 +46,3 @@ form.addEventListener("submit", (e) => {
 
   form.reset();
 });
-
