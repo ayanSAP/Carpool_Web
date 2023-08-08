@@ -18,7 +18,7 @@ firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
 
-const ref = DB.ref("Rider");
+const ref = DB.ref("Driver");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -27,6 +27,8 @@ form.addEventListener("submit", (e) => {
   const email = document.getElementById("email").value;
   const contactNo = document.getElementById("contact_no").value;
   const carDetails = document.getElementById("car_details").value;
+
+  const ref = DB.ref("drivers/" + fullName);
 
   console.log(fullName, email, contactNo, carDetails);
 
