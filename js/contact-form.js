@@ -29,7 +29,7 @@ form.addEventListener("submit", (e) => {
 
   //   console.log(fullName, email, textMessage);
 
-  ref.push({
+  ref.set({
     fullName: fullName,
     email: email,
     textMessage: textMessage,

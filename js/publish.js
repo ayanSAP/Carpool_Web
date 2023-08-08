@@ -32,7 +32,7 @@ form.addEventListener("submit", (e) => {
 
   console.log(fullName, email, contactNo, carDetails);
 
-  ref.push({
+  ref.set({
     Full_name: fullName,
     Email: email,
     Contact_no: contactNo,
@@ -46,3 +46,4 @@ form.addEventListener("submit", (e) => {
 
   form.reset();
 });
+
