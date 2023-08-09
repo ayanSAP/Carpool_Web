@@ -2,7 +2,6 @@ const form = document.getElementById("form_id");
 const alert = document.querySelector(".alert");
 
 // Your web app's Firebase configuration
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBqzmB5cPsejDGpxgJsD-_ZfBs17uGoeiE",
   authDomain: "ridepublish.firebaseapp.com",

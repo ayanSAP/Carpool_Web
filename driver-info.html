@@ -41,9 +41,9 @@
     <link rel="shortcut icon" href="fav-img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="fav-img/favicon.ico" type="image/x-icon" />
 
-    <!-- Firebase CDN -->
+    <!-- Firebase CDN
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script> -->
   </head>
   <body>
     <div class="container">
@@ -64,32 +64,7 @@
       </table>
     </div>
 
-    <script>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyBqzmB5cPsejDGpxgJsD-_ZfBs17uGoeiE",
-        authDomain: "ridepublish.firebaseapp.com",
-        databaseURL: "https://ridepublish-default-rtdb.firebaseio.com",
-        projectId: "ridepublish",
-        storageBucket: "ridepublish.appspot.com",
-        messagingSenderId: "145760624915",
-        appId: "1:145760624915:web:f75564f3f2d89b68d1bae6",
-      };
-
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.database().ref("drivers");
-      db.once(
-        ("value",
-        function (snapshot) {
-          var data = snapshot.val();
-
-          for (let i in data) {
-            console.log(data[i]);
-          }
-        })
-      );
-      // Get the Data
-    </script>
+    <!-- Javascript  -->
+    <script type="module" src="js/driver-info.js"></script>
   </body>
 </html>
