@@ -116,8 +116,6 @@ ul#shape li:nth-child(10) {
   }
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
@@ -226,7 +224,7 @@ input[type="submit"]:hover {
 
 /* Signup Link */
 .signup_link {
-  margin-top: 30px;
+  margin-top: 15px;
   text-align: center;
   font-size: 14px;
   color: #666666;
@@ -243,7 +241,7 @@ input[type="submit"]:hover {
 
 /* Login link */
 .login_link {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   margin-top: 5px;
   text-align: center;
   font-size: 14px;
@@ -256,6 +254,24 @@ input[type="submit"]:hover {
 }
 
 .login_link a:hover {
+  text-decoration: underline;
+}
+
+/* Home link */
+.home_link {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
+
+.home_link a {
+  color: #ce4257;
+  text-decoration: none;
+}
+
+.home_link a:hover {
   text-decoration: underline;
 }
 
