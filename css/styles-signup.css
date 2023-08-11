@@ -16,37 +16,110 @@ body {
   overflow: hidden;
 }
 
-.bubbles {
-  position: relative;
-  display: flex;
+ul#shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
-.bubbles span {
-  position: relative;
+ul#shape li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 40px;
+  background-color: #e2bfc4;
+  bottom: -200px;
+
+  animation: floating 10s infinite linear;
+}
+
+ul#shape li:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 25%;
+  animation-delay: 0.1s;
+}
+
+ul#shape li:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 95%;
+  animation-delay: 10s;
+}
+
+ul#shape li:nth-child(3) {
+  width: 70px;
+  height: 70px;
+  left: 75%;
+  animation-delay: 18s;
+}
+
+ul#shape li:nth-child(4) {
   width: 30px;
   height: 30px;
-  background-color: #ce4257;
-  margin: 0 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px #e48b98, 0 0 50px #ce4257, 0 0 100px #ce4257;
-  animation: animate 10s linear infinite;
-  animation-duration: calc(90s / var(--i));
+  left: 10%;
+  animation-delay: 5s;
 }
 
-.bubbles span:nth-child(even) {
-  background: #df7686;
-  box-shadow: 0 0 0 10px #dd929d, 0 0 50px #df7686, 0 0 100px #df7686;
+ul#shape li:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  left: 60%;
+  animation-delay: 8s;
 }
 
-@keyframes animate {
-  0% {
-    transform: translateY(100vh) scale(0);
+ul#shape li:nth-child(6) {
+  width: 90px;
+  height: 90px;
+  left: 84%;
+  animation-delay: 1s;
+}
+
+ul#shape li:nth-child(7) {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  animation-delay: 15s;
+}
+
+ul#shape li:nth-child(8) {
+  width: 100px;
+  height: 100px;
+  left: 40%;
+  animation-delay: 6s;
+}
+
+ul#shape li:nth-child(9) {
+  width: 75px;
+  height: 75px;
+  left: 70%;
+  animation-delay: 3s;
+}
+ul#shape li:nth-child(10) {
+  width: 40px;
+  height: 40px;
+  left: 30%;
+  animation-delay: 14s;
+}
+
+@keyframes floating {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
   }
-  100% {
-    transform: translateY(-10vh) scale(1);
+
+  to {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 80%;
   }
 }
 
+/* Main body */
 .center {
   position: absolute;
   top: 50%;
