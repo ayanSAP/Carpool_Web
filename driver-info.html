@@ -86,6 +86,7 @@
       const app = initializeApp(firebaseConfig);
 
       const db = getDatabase();
+
       // ---------------------FILLING THE TABLE---------------------//
       var tbody = document.getElementById("tbody1");
       function AddItemToTable(name, email, contact, details) {
@@ -121,10 +122,23 @@
       }
 
       // -------------------GETTING ALL THE DATA-------------------------
-      function GetAllDataOnce() {
-        const dbRef = ref(db);
+      // function GetAllDataOnce() {
+      //   const dbRef = ref(db);
 
-        get(child(dbRef, "drivers/")).then((snapshot) => {
+      //   get(child(dbRef, "drivers/")).then((snapshot) => {
+      //     var drivers = [];
+      //     snapshot.forEach((element) => {
+      //       drivers.push(element.val());
+      //     });
+
+      //     AddAllItemsToTable(drivers);
+      //   });
+      // }
+
+      function GetAllDataRealTime() {
+        const dbRef = ref(db, "drivers/");
+
+        onValue(dbRef, (snapshot) => {
           var drivers = [];
           snapshot.forEach((element) => {
             drivers.push(element.val());
@@ -134,7 +148,7 @@
         });
       }
 
-      window.onload = GetAllDataOnce;
+      window.onload = GetAllDataRealTime;
     </script>
   </body>
 </html>
