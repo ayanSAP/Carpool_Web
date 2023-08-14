@@ -254,6 +254,7 @@ th {
 .floatLeft {
   width: 70%;
   float: left;
+  height: 100px;
 }
 
 .floatRight {
