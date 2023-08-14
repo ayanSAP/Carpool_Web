@@ -58,6 +58,9 @@ window.signup = function (e) {
         }, 2000);
 
         form.reset();
+        setTimeout(() => {
+          window.location.href = "../login.html";
+        }, 2000);
       })
       .catch((err) => {
         window.alert("Sign up error" + err);

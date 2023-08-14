@@ -24,37 +24,30 @@
     <!-- Firebase CDN -->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
-  </head>
-  <body>
+
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/a7e82826af.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Navbar with Media Allignment -->
-    <nav class="navbar">
-      <span class="navbar-toggle" id="js-navbar-toggle">
-        <i class="fa-solid fa-bars" style="color: #000000"></i>
-      </span>
-      <a href="#" class="logo">LOGO</a>
-      <ul class="main-nav" id="js-menu">
-        <li>
-          <a href="#" class="nav-links">Home</a>
-        </li>
-        <li>
-          <a href="#" class="nav-links">About</a>
-        </li>
-        <li>
-          <a href="contact.html" class="nav-links">Contact</a>
-        </li>
-        <li>
-          <a href="news.html" class="nav-links">News</a>
-        </li>
-        <li>
-          <a href="login.html" class="nav-links active">Login</a>
-        </li>
-      </ul>
-    </nav>
+  </head>
+  <body>
+    <!-- <Animate Background -->
+    <div class="container">
+      <ul id="shape">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+
+    
 
     <div class="center">
       <h1>PUBLISH A RIDE</h1>
@@ -65,11 +58,7 @@
           <label>Full Name</label>
         </div>
 
-        <!-- <div class="txt_field">
-          <input type="text" name="last_name" id="last_name" required />
-          <span></span>
-          <label>Last name</label>
-        </div> -->
+      
         <div class="txt_field">
           <input type="text" name="email" id="email" required />
           <span></span>
@@ -94,13 +83,22 @@
         <div class="login_link">
           Already a member? <a href="login.html">Login</a>
         </div>
+        <div class="home_link">
+          Go back? <a href="index.html">Home</a>
+        </div>
+
       </form>
     </div>
 
     <div class="footer">
       <div class="footer_container">
         <div class="footer_content">
-          <p>© 2023</p>
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </p>
           <img src="images/icons8-sap-48.png" alt="Footer Logo" />
         </div>
       </div>

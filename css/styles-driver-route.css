@@ -5,8 +5,10 @@
   margin: 0;
 }
 
+html,
 body {
   font-family: "Montserrat", sans-serif;
+  min-height: 1450px;
 }
 
 .navbar {
@@ -100,9 +102,8 @@ body {
   .logo:hover,
   .nav-links:hover {
     color: rgba(255, 255, 255, 1);
-  } 
+  }
 }
-
 
 form {
   background-image: url("Carpool.app/DriverRoute.png");
@@ -119,8 +120,9 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 70%;
   height: 100%;
+  margin-left: 15%;
 }
 
 .form-group {
@@ -158,6 +160,11 @@ form {
   background-color: #ce4257;
   color: white;
   padding: 10px;
+  cursor: pointer;
+}
+#search:hover {
+  border-color: #ce4257;
+  transition: 0.3s;
 }
 
 .input-with-icon {
@@ -166,13 +173,13 @@ form {
 }
 
 .input-with-icon input[type="number"] {
-  padding-left: 25px; 
+  padding-left: 25px;
 }
 
 .input-with-icon i.fa-user {
   position: absolute;
   top: 50%;
-  left: 40px; 
+  left: 40px;
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -198,13 +205,17 @@ button {
   justify-content: center;
   height: auto;
   text-align: center;
-  margin-right: 130px;
-  margin-left: 130px;
+  margin-right: 200px;
+  margin-left: 200px;
   margin-bottom: 30px;
   margin-top: 30px;
   padding: 10px;
   background-color: white;
   color: black;
+}
+
+.info h1 {
+  margin-bottom: 30px;
 }
 
 /* Media query for mobile */
@@ -215,18 +226,89 @@ button {
   }
 }
 
-
-
-.footer {
-  background-color: #ccc;
-  color: black;
-  padding: 10px;
-  text-align: left;
+/* --------------TABLE---------------- */
+.table {
+  margin: 30px 40px;
+  padding-top: 70px;
 }
 
-.SAPlogo {
-  width: 33px;
-  max-width: none;
-  height: auto;
-  margin-left: 5px;
+.table h1 {
+  text-align: center;
+  color: #ce4257;
+  padding-bottom: 20px;
+}
+
+/* Table Design */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+.floatLeft {
+  width: 70%;
+  float: left;
+  height: 100px;
+}
+
+.floatRight {
+  width: 30%;
+  float: right;
+}
+
+/* ----------TABLE BUTTONS------------ */
+.button1 {
+  height: 40px;
+  width: 120px;
+  border: 2px solid #ce4257;
+  background-color: white;
+  border-color: #ce4257;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #ce4257;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #ce4257;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+
+.button1:hover {
+  box-shadow: inset 400px 0 0 0 #ce4257;
+  color: white;
+}
+
+/*---------------FOOTER--------------*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(220, 219, 219);
+  color: white;
+  height: 50px;
+}
+
+.footer_container {
+  display: flex;
+}
+
+.footer_container p {
+  float: left;
+  padding-top: 18px;
+  padding-left: 50px;
+  color: black;
+}
+
+.footer_container img {
+  float: left;
+  padding-top: 2px;
+  padding-left: 10px;
 }

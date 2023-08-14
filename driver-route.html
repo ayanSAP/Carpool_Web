@@ -15,6 +15,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles-driver-route.css" />
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="fav-img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="fav-img/favicon.ico" type="image/x-icon" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -37,27 +41,26 @@
       <a href="#" class="logo">SAP Ride</a>
       <ul class="main-nav" id="js-menu">
         <li>
-          <a href="#" class="nav-links">Home</a>
+          <a href="index.html" class="nav-links">Home</a>
         </li>
         <li>
-          <a href="get-started.html" class="nav-links">Get started</a>
+          <a href="about-page.html" class="nav-links">About</a>
         </li>
         <li>
-          <a href="#" class="nav-links">About</a>
+          <a href="contact.html" class="nav-links">Contact</a>
         </li>
         <li>
-          <a href="#" class="nav-links">Contact</a>
+          <a href="news.html" class="nav-links">News</a>
         </li>
         <li>
-          <a href="#" class="nav-links">News</a>
-        </li>
-        <li>
-          <a href="#" class="nav-links">Login</a>
+          <a href="login.html" class="nav-links">Login</a>
         </li>
       </ul>
     </nav>
+
+    <!-- Body part -->
     <div class="container">
-      <form>
+      <form id="form_id">
         <img
           src="images/DriverRoute.png"
           alt="DriverRouteImage"
@@ -87,11 +90,12 @@
               min="1"
             />
           </div>
-          <button type="submit" id="search">Search</button>
+          <!-- <button type="submit" id="search">Search</button> -->
+          <input type="button" name="search" id="search" value="Search" />
         </div>
       </form>
       <div class="info">
-        <h1>Welcome dear drivers</h1>
+        <h1>Welcome dear Users</h1>
         <p>
           We're excited to introduce you to a seamless solution for making your
           daily commute an enjoyable and collaborative experience. Designed
@@ -115,14 +119,55 @@
           positive impact on our workplace community.
         </p>
       </div>
-      <footer class="footer">
-        <p>
-          ©2023<img src="images/SAPlogo.png" alt="SAPlogo" class="SAPlogo" />
-        </p>
-      </footer>
 
-      <!-- JS -->
-      <script src="js/driver-route.js"></script>
+      <div class="table">
+        <h1>Found Rides</h1>
+        <div class="floatLeft">
+          <table class="show" id="show">
+            <tr>
+              <th>Leaving from</th>
+              <th>Going to</th>
+              <th>Date/ Time</th>
+              <th>Seat Availability</th>
+            </tr>
+            <tr></tr>
+          </table>
+        </div>
+        <div class="floatRight">
+          <table>
+            <tr>
+              <th>Request Ride</th>
+              <th>Driver Info</th>
+            </tr>
+            <tr>
+              <td><button class="button button1">Request Ride</button></td>
+              <td>
+                <a href="driver-info.html"
+                  ><button class="button button1">View Driver</button></a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer_container">
+        <div class="footer_content">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </p>
+          <img src="images/icons8-sap-48.png" alt="SAP Logo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/driver-route.js"></script>
   </body>
 </html>

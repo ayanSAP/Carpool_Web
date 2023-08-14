@@ -1,7 +1,7 @@
 const form = document.getElementById("form_id");
 const alert = document.querySelector(".alert");
+const fullName = document.getElementById("f_name").value;
 
-// Your web app's Firebase configuration
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBqzmB5cPsejDGpxgJsD-_ZfBs17uGoeiE",
@@ -18,7 +18,7 @@ firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
 
-const ref = DB.ref("Rider");
+const ref = DB.ref("drivers/");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
   const contactNo = document.getElementById("contact_no").value;
   const carDetails = document.getElementById("car_details").value;
 
-  console.log(fullName, email, contactNo, carDetails);
+  // console.log(fullName, email, contactNo, carDetails);
 
   ref.push({
     Full_name: fullName,

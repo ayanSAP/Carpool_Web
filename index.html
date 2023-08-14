@@ -52,6 +52,7 @@
       </ul>
     </nav>
 
+    <!-- Center Image -->
     <div class="center">
       <div class="center_text">
         <h1>SAP</h1>
@@ -67,13 +68,13 @@
           <input
             type="submit"
             value="Offer a ride"
-            id="submit"
+            id="submit_1"
             onclick="validate()"
           />
           <input
             type="submit"
             value="Search a ride"
-            id="submit"
+            class="submit_2"
             onclick="validate()"
           />
         </div>
@@ -86,7 +87,12 @@
     <div class="footer">
       <div class="footer_container">
         <div class="footer_content">
-          <p>© 2023</p>
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </p>
           <img src="images/icons8-sap-48.png" alt="SAP Logo" />
         </div>
       </div>
