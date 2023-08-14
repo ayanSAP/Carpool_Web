@@ -55,13 +55,86 @@
           <th>Contact Number</th>
           <th>Car Details</th>
         </thead>
-        <tbody id="tbody1">
-          
-        </tbody>
+        <tbody id="tbody1"></tbody>
       </table>
     </div>
 
     <!-- Javascript  -->
-    <script type="module" src="js/driver-info.js"></script>
+    <script type="module">
+      // Firebase
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        child,
+        onValue,
+        get,
+      } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js";
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBqzmB5cPsejDGpxgJsD-_ZfBs17uGoeiE",
+        authDomain: "ridepublish.firebaseapp.com",
+        databaseURL: "https://ridepublish-default-rtdb.firebaseio.com",
+        projectId: "ridepublish",
+        storageBucket: "ridepublish.appspot.com",
+        messagingSenderId: "145760624915",
+        appId: "1:145760624915:web:f75564f3f2d89b68d1bae6",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      const db = getDatabase();
+      // ---------------------FILLING THE TABLE---------------------//
+      var tbody = document.getElementById("tbody1");
+      function AddItemToTable(name, email, contact, details) {
+        let trow = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+
+        td1.innerHTML = name;
+        td2.innerHTML = email;
+        td3.innerHTML = contact;
+        td4.innerHTML = details;
+
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        trow.appendChild(td3);
+        trow.appendChild(td4);
+
+        tbody.appendChild(trow);
+      }
+
+      function AddAllItemsToTable(TheDrivers) {
+        tbody.innerHTML = "";
+        TheDrivers.forEach((element) => {
+          AddItemToTable(
+            element.Full_name,
+            element.Email,
+            element.Contact_no,
+            element.Car_Details
+          );
+        });
+      }
+
+      // -------------------GETTING ALL THE DATA-------------------------
+      function GetAllDataOnce() {
+        const dbRef = ref(db);
+
+        get(child(dbRef, "drivers/")).then((snapshot) => {
+          var drivers = [];
+          snapshot.forEach((element) => {
+            drivers.push(element.val());
+          });
+
+          AddAllItemsToTable(drivers);
+        });
+      }
+
+      window.onload = GetAllDataOnce;
+    </script>
   </body>
 </html>
