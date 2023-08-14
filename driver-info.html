@@ -23,6 +23,7 @@
       table {
         border-collapse: collapse;
         width: 80%;
+        margin-left: 10%;
       }
       td,
       th {
@@ -40,10 +41,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="fav-img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="fav-img/favicon.ico" type="image/x-icon" />
-
-    <!-- Firebase CDN
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script> -->
   </head>
   <body>
     <div class="container">
@@ -71,6 +68,7 @@
         onValue,
         get,
       } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js";
+
       // Your web app's Firebase configuration
       const firebaseConfig = {
         apiKey: "AIzaSyBqzmB5cPsejDGpxgJsD-_ZfBs17uGoeiE",
