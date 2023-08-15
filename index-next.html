@@ -32,13 +32,20 @@
       <span class="navbar-toggle" id="js-navbar-toggle">
         <i class="fa-solid fa-bars" style="color: #000000"></i>
       </span>
-      <a href="#" class="logo">SAP Ride</a>
+      <div class="logo-image">
+        <div class="image-left">
+          <img src="images/carpoolLogo.png" alt="" />
+        </div>
+        <div class="logo-right">
+          <a href="#" class="logo">SAP Ride</a>
+        </div>
+      </div>
       <ul class="main-nav" id="js-menu">
         <li>
-          <a href="#" class="nav-links">Home</a>
+          <a href="#" class="nav-links active">Home</a>
         </li>
         <li>
-          <a href="about-page.html" class="nav-links">About</a>
+          <a href="about-page.html" class="nav-links ">About</a>
         </li>
         <li>
           <a href="contact.html" class="nav-links">Contact</a>
@@ -76,13 +83,13 @@
             type="submit"
             value="Offer a ride"
             id="submit_1"
-            onclick="validate()"
+            onclick="validate1()"
           />
           <input
             type="submit"
             value="Search a ride"
             id="submit_2"
-            onclick="validate()"
+            onclick="validate2()"
           />
         </div>
       </div>
