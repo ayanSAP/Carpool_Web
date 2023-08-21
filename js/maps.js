@@ -4,12 +4,13 @@ async function initMap() {
   const myLatLng = { lat: 53.34981525129379, lng: -6.260307536330465 };
   const { Map } = await google.maps.importLibrary("maps");
 
+  // Location Rendering
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const directionsService = new google.maps.DirectionsService();
 
   map = new Map(document.getElementById("map"), {
     center: myLatLng,
-    zoom: 12,
+    zoom: 14,
   });
 
   // MAPS MARKER
@@ -19,16 +20,19 @@ async function initMap() {
     title: "Current Location",
   });
 
-  //Direction Rendering and Service
+  //Rendering the Map
   directionsRenderer.setMap(map);
   calculateAndDisplayRoute(directionsService, directionsRenderer);
-  document.getElementById("mode").addEventListener("change", () => {
+  document.getElementById("button_dest").addEventListener("click", () => {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
   });
 
+  // -------------GEOLOCATION SERVICE-------------
   infoWindow = new google.maps.InfoWindow();
 
   const locationButton = document.createElement("button");
+  locationButton.style.marginLeft = "80%";
+  locationButton.style.marginTop = "18px";
 
   locationButton.textContent = "Current Location";
   locationButton.classList.add("custom-map-control-button");
@@ -69,18 +73,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-//Function to calculate and display route
+//Direction Service and Rendering
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-  const selectedMode = document.getElementById("mode").value;
-
   directionsService
     .route({
-      origin: { lat: 53.34981525129379, lng: -6.260307536330465 },
-      destination: { lat: 53.38892625542064, lng: -6.368488811134041 },
-      // Note that Javascript allows us to access the constant
-      // using square brackets and a string value as its
-      // "property."
-      travelMode: google.maps.TravelMode[selectedMode],
+      origin: document.getElementById("start").value,
+      destination: document.getElementById("end").value,
+      travelMode: google.maps.TravelMode.DRIVING,
     })
     .then((response) => {
       directionsRenderer.setDirections(response);
