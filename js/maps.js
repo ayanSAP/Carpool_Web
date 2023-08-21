@@ -1,86 +1,31 @@
 let map, infoWindow;
-const myLatLng = { lat: 53.3498053, lng: -6.2603097 };
 
 async function initMap() {
+  const myLatLng = { lat: 53.34981525129379, lng: -6.260307536330465 };
   const { Map } = await google.maps.importLibrary("maps");
+
+  const directionsRenderer = new google.maps.DirectionsRenderer();
+  const directionsService = new google.maps.DirectionsService();
 
   map = new Map(document.getElementById("map"), {
     center: myLatLng,
-    zoom: 10,
+    zoom: 12,
   });
 
+  // MAPS MARKER
   new google.maps.Marker({
     position: myLatLng,
-    map: map,
-    label: "A",
-    title: "SAP",
-    draggable: true,
-    animation: google.maps.Animation.DROP,
+    map,
+    title: "Current Location",
   });
 
-  //   create searchbox and link it to the UI element
-  const input = document.getElementById("pac-input");
-  const searchBox = new google.maps.places.SearchBox(input);
-
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener("bounds_changed", () => {
-    searchBox.setBounds(map.getBounds());
+  //Direction Rendering and Service
+  directionsRenderer.setMap(map);
+  calculateAndDisplayRoute(directionsService, directionsRenderer);
+  document.getElementById("mode").addEventListener("change", () => {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
   });
 
-  let markers = [];
-
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  searchBox.addListener("places_changed", () => {
-    const places = searchBox.getPlaces();
-
-    if (places.length == 0) {
-      return;
-    }
-
-    // Clear out the old markers.
-    markers.forEach((marker) => {
-      marker.setMap(null);
-    });
-    markers = [];
-    // For each place, get the icon, name and location.
-    const bounds = new google.maps.LatLngBounds();
-
-    places.forEach((place) => {
-      if (!place.geometry || !place.geometry.location) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
-
-      const icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
-
-      //create a marker fr each place
-      markers.push(
-        new google.maps.Marker({
-          map,
-          icon,
-          title: place.name,
-          position: place.geometry.location,
-        })
-      );
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
-    });
-    map.fitBounds(bounds);
-  });
-
-  //creating geolocation
   infoWindow = new google.maps.InfoWindow();
 
   const locationButton = document.createElement("button");
@@ -88,7 +33,6 @@ async function initMap() {
   locationButton.textContent = "Current Location";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-
   locationButton.addEventListener("click", () => {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -115,8 +59,6 @@ async function initMap() {
   });
 }
 
-initMap();
-
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
@@ -126,3 +68,24 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
+
+//Function to calculate and display route
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  const selectedMode = document.getElementById("mode").value;
+
+  directionsService
+    .route({
+      origin: { lat: 53.34981525129379, lng: -6.260307536330465 },
+      destination: { lat: 53.38892625542064, lng: -6.368488811134041 },
+      // Note that Javascript allows us to access the constant
+      // using square brackets and a string value as its
+      // "property."
+      travelMode: google.maps.TravelMode[selectedMode],
+    })
+    .then((response) => {
+      directionsRenderer.setDirections(response);
+    })
+    .catch((e) => window.alert("Directions request failed due to " + status));
+}
+
+initMap();
