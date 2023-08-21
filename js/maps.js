@@ -73,6 +73,37 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
+//LOCATION AUTOCOMPLETE
+google.maps.event.addDomListener(window, "load", initialize);
+
+function initialize() {
+  var inputLeaving = document.getElementById("start");
+  var inputGoing = document.getElementById("end");
+
+  var autocompleteLeaving = new google.maps.places.Autocomplete(inputLeaving);
+  var autocompleteGoing = new google.maps.places.Autocomplete(inputGoing);
+
+  autocompleteLeaving.addListener("place_changed", function () {
+    var place = autocompleteLeaving.getPlace();
+
+    // place variable will have all the information you are looking for.
+
+    $("#lat").val(place.geometry["location"].lat());
+
+    $("#long").val(place.geometry["location"].lng());
+  });
+
+  autocompleteGoing.addListener("place_changed", function () {
+    var place = autocompleteGoing.getPlace();
+
+    // place variable will have all the information you are looking for.
+
+    $("#lat").val(place.geometry["location"].lat());
+
+    $("#long").val(place.geometry["location"].lng());
+  });
+}
+
 //Direction Service and Rendering
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
   directionsService
