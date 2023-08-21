@@ -13,8 +13,6 @@ const form1 = document.getElementById("form_id");
 
 var row = 1;
 
-
-
 function displayDetails() {
   var leavingFromInput = document.getElementById("leaving-from").value;
   var goingToInput = document.getElementById("going-to").value;
@@ -46,5 +44,3 @@ function displayDetails() {
   //reset the form
   form1.reset();
 }
-
-
