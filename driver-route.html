@@ -162,16 +162,20 @@
                 </button>
               </td>
               <td>
-                <a href="driver-info.html"
-                  ><button class="button button1">View Driver</button></a
-                >
+                <!-- <a href="driver-info.html"
+                  ><button class="button button1" id="modal-btn-2">View Driver</button></a
+                > -->
+                <button class="button button1" id="modal-btn-2">
+                  View Driver
+                </button>
               </td>
             </tr>
           </table>
         </div>
       </div>
 
-      <!-- Modal Class -->
+      <!-- MODAL CLASS -->
+      <!-- MODAL CLASS REQUEST RIDE -->
       <div class="modal" id="my-modal">
         <div class="modal-content">
           <div class="modal-header">
@@ -180,6 +184,28 @@
           </div>
           <div class="modal-body">
             <p>Thank you for using SAP Ride</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Class Driver Info -->
+      <div class="modal-2" id="my-modal-2">
+        <div class="modal-content-2">
+          <div class="modal-header-2">
+            <span class="close-2">&times;</span>
+            <h2>Driver Information</h2>
+          </div>
+          <div class="modal-body-2">
+            <!-- CSS Table -->
+            <table class="table1">
+              <thead>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Car Details</th>
+              </thead>
+              <tbody id="tbody1"></tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -240,35 +266,59 @@
         });
       }
 
-      // Modal Structure
+      // MODAL STRUCTURE REQUEST RIDE
 
       // Get DOM Elements
       const modal = document.querySelector("#my-modal");
+      const modalDriver = document.querySelector("#my-modal-2");
 
       const modalBtn = document.querySelector("#modal-btn");
+      const modalBtnDriver = document.querySelector("#modal-btn-2");
 
       const closeBtn = document.querySelector(".close");
+      const closeBtnDriver = document.querySelector(".close-2");
 
       // Events
       modalBtn.addEventListener("click", openModal);
+      modalBtnDriver.addEventListener("click", openModal2);
 
       closeBtn.addEventListener("click", closeModal);
-      window.addEventListener("click", outsideClick);
+      closeBtnDriver.addEventListener("click", closeModal2);
 
-      // Open
+      window.addEventListener("click", outsideClick);
+      window.addEventListener("click", outsideClick2);
+
+      // Open Modal Request
       function openModal() {
         modal.style.display = "block";
       }
 
-      // Close
+      // Open Modal Driver
+      function openModal2() {
+        modalDriver.style.display = "block";
+      }
+
+      // Close Model Request
       function closeModal() {
         modal.style.display = "none";
       }
 
-      // Close If Outside Click
+      // Close Model Driver
+      function closeModal2() {
+        modalDriver.style.display = "none";
+      }
+
+      // Close If Outside Click for Request Modal
       function outsideClick(e) {
         if (e.target == modal) {
           modal.style.display = "none";
+        }
+      }
+
+      // Close If Outside Click for Driver Info
+      function outsideClick2(e) {
+        if (e.target == modalDriver) {
+          modalDriver.style.display = "none";
         }
       }
     </script>
